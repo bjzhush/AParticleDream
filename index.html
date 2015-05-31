@@ -27,7 +27,16 @@
     </div>
     <div id="debug-box"></div>
     <audio id="music" src="./El%20Condor%20Pasa.mp3" autoplay loop></audio>
+    <div id="error">本页面采用HTML5编辑，目前您的浏览器无法显示，请换成谷歌或者火狐浏览器，或IE10以上版本</div>
 </body>
+<script type="text/javascript">
+        var canvas = $('#webgl-canvas');
+		
+        if (!canvas[0].getContext) {
+            $("#error").show();
+            return false;
+        }
+</script>
 
 <!-- <script src="js/lib/leap-0.6.4.js"></script> -->
 <!-- <script src="js/lib/leap-plugins-0.1.10.js"></script> -->
